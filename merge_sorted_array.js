@@ -32,28 +32,33 @@ function merge_tab(res,p1,p2){
 merge_tab(res,0,0);
 
 // version 2 iterative
-function merge(){
-var tab1 = [1,2,3];
-var tab2 = [3,4,5,6];
+function fusion_sorted_link(){
+var tab1 = [1,2,3,7,8];
+var tab2 = [3,4,5,6,9];
 var p1 = 0;
 var p2 = 0;
-var res = {};
+var result = {};
 alert("test");
- while((p1 < tab1.length)||(p2 < tab2.length)){
+ while(p1 < tab1.length){
      if(tab1[p1] < tab2[p2]){
-       res[tab1[p1]] = tab1[p1];
+        alert("p1 :" + " " + p1);
+       result[tab1[p1]] = tab1[p1];
        p1++;
      }
-     /*else if(tab1[p1] === tab2[p2]){
-        alert("A voir");
-        res[tab1[p1]] = tab1[p1];
-        p1++;
-     }*/
-     else {
-      res[tab2[p2]] = tab2[p2];
+     else{
+      result[tab2[p2]] = tab2[p2];
       p2++;
      }
+    }
+  alert("p2:" + " "+ p2);
+ if(p1!== tab1.length){
+    for(var i = p1; i < tab1.length; i++)
+         result[tab1[i]] = tab1[i];
  }
- return res;
+ if(p2!== tab2.length){
+    for(var j = p2; j < tab2.length; j++)
+         result[tab2[j]] = tab2[j];
+ }
+ return result;
 }
-merge();
+fusion_sorted_link();
