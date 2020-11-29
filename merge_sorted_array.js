@@ -62,3 +62,22 @@ alert("test");
  return result;
 }
 fusion_sorted_link();
+
+// test
+var p1 = 0;
+var p2 = 0;
+var tab1 = [1,2,4,6,8];
+var tab2 = [3,5,7,9,10,11];
+while(p1 < tab1.length || p2 < tab2.length){
+     if(tab1[p1] < tab2[p2]){
+       console.log("venant tableau1 : " + " " +tab1[p1]);
+       p1++;
+     }
+     else{
+       console.log("venant tableau2 : " + " " +tab2[p2]);
+       p2++;
+     }
+}
+
+
+
